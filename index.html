@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraInvest | L'Expédition Privée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            charcoal: '#1A1A18', /* Noir très doux */
+                            linen: '#F6F4F0',    /* Couleur lin / sable très clair */
+                            terracotta: '#B36A4F', /* Terre cuite / Chaleur d'Israël */
+                            sage: '#626C60',     /* Vert sauge / Agriculture */
+                            gold: '#C5A880'      /* Or doux */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #F6F4F0; }
+        
+        .fade-in-up { animation: fadeInUp 1.5s ease-out forwards; opacity: 0; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        /* Hero Image avec effet cinématique */
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 26, 24, 0.3), rgba(26, 26, 24, 0.6)), url('https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Lignes décoratives fines */
+        .fine-line { height: 1px; background-color: rgba(197, 168, 128, 0.4); }
+    </style>
+</head>
+<body class="font-sans text-brand-charcoal antialiased selection:bg-brand-terracotta selection:text-white">
+
+    <!-- Navbar Conciergerie -->
+    <nav class="absolute w-full z-50 py-8 px-6 md:px-12 flex justify-between items-center text-white border-b border-white/20">
+        <div class="font-serif text-3xl tracking-wide">TerraInvest.</div>
+        <div class="hidden md:flex gap-8 text-xs uppercase tracking-[0.2em]">
+            <a href="#concept" class="hover:text-brand-gold transition-colors">Le Concept</a>
+            <a href="#itineraire" class="hover:text-brand-gold transition-colors">L'Expédition</a>
+            <a href="#conciergerie" class="hover:text-brand-gold transition-colors">Conciergerie</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Voyage Luxe) -->
+    <header class="hero-bg h-screen w-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl pt-20">
+            <h2 class="text-brand-gold font-sans tracking-[0.3em] uppercase text-xs md:text-sm mb-8 fade-in-up">Voyages d'Exception & Stratégie Foncière</h2>
+            <h1 class="text-white font-serif text-5xl md:text-7xl font-light leading-tight mb-8 fade-in-up delay-300">
+                Le voyage le plus précieux est celui <br>
+                <span class="italic text-brand-gold">qui laisse une trace.</span>
+            </h1>
+            <p class="text-gray-200 font-sans font-light text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-12 fade-in-up delay-600 tracking-wide">
+                Une expédition VIP de 4 jours au cœur d'Israël. L'alliance parfaite entre l'art de vivre, la gastronomie locale, et l'acquisition stratégique de terres agricoles à fort potentiel.
+            </p>
+            <div class="fade-in-up delay-600">
+                <a href="#concept" class="inline-block border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-charcoal px-10 py-4 text-xs uppercase tracking-[0.2em] transition-all duration-500">
+                    Découvrir l'Expérience
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Le Concept (Le Luxe Utile) -->
+    <section id="concept" class="py-32 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+            <span class="text-brand-terracotta font-sans tracking-[0.2em] uppercase text-xs">L'Art de l'Utile</span>
+            <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6">Pourquoi se contenter de visiter un pays<br>quand on peut en posséder une partie ?</h2>
+            <div class="w-12 h-px bg-brand-gold mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2 relative">
+                <div class="absolute -inset-4 border border-brand-gold/30 translate-x-4 translate-y-4"></div>
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1000" alt="Luxe et nature" class="w-full h-[500px] object-cover relative z-10 shadow-2xl">
+            </div>
+            <div class="w-full md:w-1/2 space-y-8">
+                <div>
+                    <h3 class="font-serif text-2xl text-brand-terracotta mb-3">L'Immersion Privilège</h3>
+                    <p class="font-light text-sm leading-relaxed text-gray-600 text-justify">
+                        Logez dans les plus beaux "boutique-hôtels", voyagez en vans privés et dînez dans des domaines viticoles exclusifs. Nous transformons la recherche d'investissement en une parenthèse enchantée.
+                    </p>
+                </div>
+                <div class="fine-line w-full"></div>
+                <div>
+                    <h3 class="font-serif text-2xl text-brand-sage mb-3">L'Acquisition Stratégique</h3>
+                    <p class="font-light text-sm leading-relaxed text-gray-600 text-justify">
+                        Derrière l'élégance du voyage se cache une ambition forte. Vous êtes accompagnés par des avocats et urbanistes pour sourcer et acquérir des terres agricoles en Tabo privé, aux portes des villes en pleine expansion.
+                    </p>
+                </div>
+                <div class="fine-line w-full"></div>
+                <div>
+                    <h3 class="font-serif text-2xl text-brand-gold mb-3">L'Héritage Foncier</h3>
+                    <p class="font-light text-sm leading-relaxed text-gray-600 text-justify">
+                        Vous ne rentrez pas chez vous avec de simples souvenirs, mais avec un titre de propriété foncière. Un ancrage physique en Israël et un patrimoine en devenir pour vos enfants.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L'Itinéraire (Le Voyage) -->
+    <section id="itineraire" class="bg-brand-charcoal text-brand-linen py-32 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-brand-gold font-sans tracking-[0.2em] uppercase text-xs">Votre Carnet de Route</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4">4 Jours d'Exception.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                <!-- Ligne de connexion (Desktop) -->
+                <div class="hidden lg:block absolute top-[45px] left-0 w-full h-px bg-brand-gold/30"></div>
+
+                <!-- Jour 1 -->
+                <div class="relative z-10">
+                    <div class="w-24 h-24 rounded-full bg-brand-charcoal border border-brand-gold flex items-center justify-center mx-auto mb-8 mx-auto">
+                        <span class="font-serif text-3xl text-brand-gold italic">I</span>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-center">L'Élégance & La Vision</h3>
+                    <p class="font-light text-xs text-gray-400 text-center leading-relaxed">
+                        Arrivée VIP à Tel Aviv. Installation en boutique-hôtel et Dîner de Gala sur les toits de la ville. Briefing confidentiel par nos avocats sur les joyaux fonciers du pays.
+                    </p>
+                </div>
+
+                <!-- Jour 2 -->
+                <div class="relative z-10">
+                    <div class="w-24 h-24 rounded-full bg-brand-charcoal border border-brand-gold flex items-center justify-center mx-auto mb-8">
+                        <span class="font-serif text-3xl text-brand-gold italic">II</span>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-center">Le Terroir & L'Avenir</h3>
+                    <p class="font-light text-xs text-gray-400 text-center leading-relaxed">
+                        Descente dans le Sud en transfert privé. Dégustation dans un vignoble réputé du Néguev, puis visite à pied de vos futures parcelles agricoles avec nos urbanistes.
+                    </p>
+                </div>
+
+                <!-- Jour 3 -->
+                <div class="relative z-10">
+                    <div class="w-24 h-24 rounded-full bg-brand-charcoal border border-brand-gold flex items-center justify-center mx-auto mb-8">
+                        <span class="font-serif text-3xl text-brand-gold italic">III</span>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-center">L'Âme & La Pierre</h3>
+                    <p class="font-light text-xs text-gray-400 text-center leading-relaxed">
+                        Découverte privilégiée de Jérusalem. L'après-midi, notre service de conciergerie juridique organise vos rendez-vous privés pour la structuration de votre acquisition.
+                    </p>
+                </div>
+
+                <!-- Jour 4 -->
+                <div class="relative z-10">
+                    <div class="w-24 h-24 rounded-full bg-brand-charcoal border border-brand-gold flex items-center justify-center mx-auto mb-8">
+                        <span class="font-serif text-3xl text-brand-gold italic">IV</span>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-center">L'Héritage</h3>
+                    <p class="font-light text-xs text-gray-400 text-center leading-relaxed">
+                        Brunch signature face à la mer Méditerranée. Remise solennelle de vos "Titres d'intention d'Acquisition". Départ serein vers l'aéroport.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offre Remboursée (Le Privilège) -->
+    <section class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
+        <div class="border border-brand-gold/50 p-12 md:p-20 bg-white shadow-xl relative">
+            <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-6">
+                <span class="font-serif italic text-3xl text-brand-terracotta">Le Privilège TerraInvest</span>
+            </div>
+            <p class="font-light text-gray-600 text-lg leading-relaxed mb-8 mt-6">
+                Cette expédition de 4 jours est proposée au tarif exclusif de 1 900 €.<br><br>
+                Si l'appel de la terre se confirme et que vous procédez à l'acquisition d'une parcelle, <strong>nous considérons ce voyage comme le premier pas de notre partenariat. Le coût intégral de votre séjour sera déduit de votre investissement.</strong>
+            </p>
+            <p class="font-serif text-2xl text-brand-charcoal">Votre voyage, offert par vos racines.</p>
+        </div>
+    </section>
+
+    <!-- Contact Conciergerie -->
+    <section id="conciergerie" class="bg-[#EBE7E0] py-32 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-brand-sage font-sans tracking-[0.2em] uppercase text-xs">Conciergerie Privée</span>
+            <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-6">Demander une Invitation.</h2>
+            <p class="font-light text-sm text-gray-600 mb-12">Nos expéditions sont limitées à 10 convives pour garantir une qualité de service irréprochable et des conseils d'investissement personnalisés. Laissez vos coordonnées à notre conciergerie.</p>
+            
+            <form class="space-y-6 text-left bg-white p-10 shadow-sm border border-brand-gold/20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block font-serif italic text-brand-charcoal mb-2 text-lg">Votre Nom</label>
+                        <input type="text" class="w-full bg-brand-linen border-none p-4 focus:ring-1 focus:ring-brand-gold outline-none text-sm font-light" required>
+                    </div>
+                    <div>
+                        <label class="block font-serif italic text-brand-charcoal mb-2 text-lg">Votre Email</label>
+                        <input type="email" class="w-full bg-brand-linen border-none p-4 focus:ring-1 focus:ring-brand-gold outline-none text-sm font-light" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-serif italic text-brand-charcoal mb-2 text-lg">Numéro de contact (WhatsApp)</label>
+                    <input type="tel" class="w-full bg-brand-linen border-none p-4 focus:ring-1 focus:ring-brand-gold outline-none text-sm font-light" required>
+                </div>
+                <div class="pt-6 text-center">
+                    <button type="submit" class="bg-brand-charcoal text-brand-linen px-12 py-4 uppercase tracking-[0.2em] text-xs hover:bg-brand-gold hover:text-brand-charcoal transition-all duration-300 w-full md:w-auto">
+                        Être recontacté par un conseiller
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-charcoal text-brand-linen/40 text-center py-16 text-xs font-light tracking-wide">
+        <div class="font-serif text-2xl text-brand-gold mb-6">TerraInvest.</div>
+        <p>Voyages d'Exception & Land Banking en Israël.</p>
+        <p class="mt-4">© 2026. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
